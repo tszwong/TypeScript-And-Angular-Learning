@@ -3,7 +3,7 @@ import { Stock } from './stock';
 
 @Component({
   selector: 'app-stock-list',
-  templateUrl: './stock-list.component.html',
+  templateUrl: './stock-list-bootstrap.component.html',
   styleUrls: ['./stock-list.component.css']
 })
 export class StockListComponent implements OnInit {

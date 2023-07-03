@@ -1,0 +1,27 @@
+<table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Ticker</th>
+            <th>Highest Daily</th>
+            <th>Lowest Daily</th>
+            <th>Total Daily Change</th>
+            <th>Profit?</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!-- looping through the fields -->
+        <tr *ngFor="let tempStock of stocksList"> 
+            <td>{{tempStock.ticker}}</td>
+            <td>{{tempStock.highestPrice | currency:"USD"}}</td>
+            <td>{{tempStock.lowestPrice | currency:"USD"}}</td>
+            <td>{{tempStock.totalChange | currency:"USD"}}</td>
+            <td>
+                <div *ngIf="tempStock.totalChange > 0; else myElseBlock" style="color: darkgreen;">Yes</div>
+                <ng-template #myElseBlock>
+                    <div style="color: red;">No</div>
+                </ng-template>
+            </td>
+        </tr>
+    </tbody>
+</table>
