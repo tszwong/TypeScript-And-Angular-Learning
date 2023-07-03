@@ -1,0 +1,19 @@
+<table border = "1">
+    <thead>
+        <tr>
+            <th>Stock Ticker</th>
+            <th>Highest Daily Price</th>
+            <th>Lowest Daily Price</th>
+            <th>Total Daily Change</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let tempStock of stocksList">
+            <td>{{tempStock.ticker}}</td>
+            <td>{{tempStock.highestPrice}}</td>
+            <td>{{tempStock.lowestPrice}}</td>
+            <td>{{tempStock.totalChange}}</td>
+        </tr>
+    </tbody>
+</table>
